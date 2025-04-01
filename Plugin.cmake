@@ -31,12 +31,12 @@ set(OCPN_RELEASE_REPO
 #
 # -------  Plugin setup --------
 #
-set(PKG_NAME tradnav_pi)
+set(PKG_NAME TradNav_pi)
 set(PKG_VERSION  0.2.0)
 set(PKG_PRERELEASE "")  # Empty, or a tag like 'beta'
 
-set(DISPLAY_NAME tradnav)    # Dialogs, installer artifacts, ...
-set(PLUGIN_API_NAME tradnav) # As of GetCommonName() in plugin API
+set(DISPLAY_NAME TradNav)    # Dialogs, installer artifacts, ...
+set(PLUGIN_API_NAME TradNav) # As of GetCommonName() in plugin API
 set(PKG_SUMMARY "Traditional nav")
 set(PKG_DESCRIPTION [=[
 Traditional Navigation.
@@ -50,14 +50,14 @@ set(PKG_INFO_URL https://opencpn.org/OpenCPN/plugins/tradnav.html)
 add_definitions(-DocpnUSE_GL)
 
 SET(SRC
-        src/tradnav_pi.h
-        src/tradnav_pi.cpp
-        src/tradnavOverlayFactory.cpp
-        src/tradnavOverlayFactory.h
-        src/tradnavUIDialogBase.cpp
-        src/tradnavUIDialogBase.h
-        src/tradnavUIDialog.cpp
-        src/tradnavUIDialog.h
+        src/TradNav_pi.h
+        src/TradNav_pi.cpp
+        src/TradNavOverlayFactory.cpp
+        src/TradNavOverlayFactory.h
+        src/TradNavUIDialogBase.cpp
+        src/TradNavUIDialogBase.h
+        src/TradNavUIDialog.cpp
+        src/TradNavUIDialog.h
         src/icons.h
         src/icons.cpp
         src/NavFunc.cpp
