@@ -35,9 +35,9 @@
 #include <wx/graphics.h>
 #include <wx/progdlg.h>
 
-#include "tradnavUIDialog.h"
-#include "tradnavUIDialogBase.h"
-#include "tradnavOverlayFactory.h"
+#include "TradNavUIDialog.h"
+#include "TradNavUIDialogBase.h"
+#include "TradNavOverlayFactory.h"
 #include <vector>
 
 #ifdef __WXOSX__
