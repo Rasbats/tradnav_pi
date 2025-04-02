@@ -36,9 +36,9 @@
 
 #include "ocpn_plugin.h"
 
-#include "tradnav_pi.h"
-#include "tradnavUIDialogBase.h"
-#include "tradnavUIDialog.h"
+#include "TradNav_pi.h"
+#include "TradNavUIDialogBase.h"
+#include "TradNavUIDialog.h"
 
 // the class factories, used to create and destroy instances of the PlugIn
 
