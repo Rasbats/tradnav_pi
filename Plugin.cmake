@@ -95,10 +95,6 @@ macro(add_plugin_libraries)
   add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/jsoncpp")
   target_link_libraries(${PACKAGE_NAME} ocpn::jsoncpp)
 
-  add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/sqlite")
-  target_link_libraries(${PACKAGE_NAME} ocpn::sqlite)
-
-
   # The wxsvg library enables SVG overall in the plugin
   add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/wxsvg")
   target_link_libraries(${PACKAGE_NAME} ocpn::wxsvg)
