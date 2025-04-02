@@ -34,10 +34,9 @@
 #include <wx/glcanvas.h>
 #endif  // precompiled headers
 
-#include <sqlite3.h>
 #include "ocpn_plugin.h"
-#include "tradnavOverlayFactory.h"
-#include "tradnavUIDialog.h"
+#include "TradNavOverlayFactory.h"
+#include "TradNavUIDialog.h"
 #include <wx/datetime.h>
 #include "pidc.h"
 #include <wx/tokenzr.h>

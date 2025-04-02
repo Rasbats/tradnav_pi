@@ -37,7 +37,7 @@
 #include <math.h>
 #include <time.h>
 
-#include "tradnav_pi.h"
+#include "TradNav_pi.h"
 #include "icons.h"
 #include <wx/arrimpl.cpp>
 
