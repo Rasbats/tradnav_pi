@@ -62,7 +62,7 @@ extern "C" DECL_EXP void destroy_pi(opencpn_plugin *p) { delete p; }
 //
 //---------------------------------------------------------------------------------------------------------
 
-tradnav_pi::tradnav_pi(void *ppimgr) : opencpn_plugin_118(ppimgr) {
+tradnav_pi::tradnav_pi(void *ppimgr) : opencpn_plugin_119(ppimgr) {
   // Create the PlugIn icons
   initialize_images();
 
