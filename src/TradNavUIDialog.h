@@ -36,7 +36,7 @@
 #include <wx/fileconf.h>
 #include <wx/glcanvas.h>
 
-#include "tradnavUIDialogBase.h"
+#include "TradNavUIDialogBase.h"
 #include "NavFunc.h"
 
 #include <wx/progdlg.h>
