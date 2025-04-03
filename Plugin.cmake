@@ -65,23 +65,20 @@ SET(SRC
         src/pugixml.hpp
     )
 
-set(PKG_API_LIB api-18)  #  A directory in libs/ e. g., api-17 or api-16
+set(PKG_API_LIB api-19)  #  A directory in libs/ e. g., api-17 or api-16
 
 macro(late_init)
   # Perform initialization after the PACKAGE_NAME library, compilers
   # and ocpn::api is available.
+
+  if (APPLE)
+    target_compile_definitions(${PACKAGE_NAME} PUBLIC OCPN_GHC_FILESYSTEM)
+  endif ()
+
 endmacro ()
 
 macro(add_plugin_libraries)
   # Add libraries required by this plugin
-
-  if(WIN32)
-    add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/WindowsHeaders")
-    target_link_libraries(${PACKAGE_NAME} windows::headers)
-
-    # add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/glu")
-    # target_link_libraries(${PACKAGE_NAME} ocpn::glu_static)
-  endif()
 
   add_subdirectory("${CMAKE_SOURCE_DIR}/opencpn-libs/pugixml")
   target_link_libraries(${PACKAGE_NAME} ocpn::pugixml)

@@ -44,6 +44,8 @@
 #include "json/reader.h"
 #include "json/writer.h"
 
+#include <sqlite3.h>
+
 #define DATABASE_NAME "finSAR.db"
 
 class piDC;
