@@ -287,7 +287,7 @@ void tradnavOverlayFactory::DrawIndexTargets(PlugIn_ViewPort *BBox) {
     wxString dist_text = wxString::Format("%3.0f", dist * 100);
 
     if (dist < 0.10) {
-      std::string s = dist_text;
+      std::string s = dist_text.ToStdString();
       string r = s.substr(2, 1);
       unsigned int number_of_zeros = 2 - r.length();  // add 1 zero
 
@@ -422,7 +422,7 @@ void tradnavOverlayFactory::DrawRangeCircleInViewPort(PlugIn_ViewPort *BBox) {
     // Format distance in Finnish fashion
 
     if (dist < 0.10) {
-      std::string s = dist_text;
+      std::string s = dist_text.ToStdString();
       string r = s.substr(2, 1);
       unsigned int number_of_zeros = 2 - r.length();  // add 1 zero
 
@@ -480,7 +480,7 @@ void tradnavOverlayFactory::DrawRangeTargets(PlugIn_ViewPort *BBox) {
     wxString dist_text = wxString::Format("%3.0f", dist * 100);
 
     if (dist < 0.10) {
-      std::string s = dist_text;
+      std::string s = dist_text.ToStdString();
       string r = s.substr(2, 1);
       unsigned int number_of_zeros = 2 - r.length();  // add 1 zero
 
@@ -895,7 +895,7 @@ wxImage tradnavOverlayFactory::DrawDirectionLabels(double value, int x, int y,
   wxString direction_brg = wxString::Format("%3.0f", value);
 
   if (value < 10) {
-    std::string s = direction_brg;
+    std::string s = direction_brg.ToStdString();
     string r = s.substr(2, 1);
     unsigned int number_of_zeros = 3 - r.length();  // add 2 zero
 
@@ -903,7 +903,7 @@ wxImage tradnavOverlayFactory::DrawDirectionLabels(double value, int x, int y,
     direction_brg = r;
 
   } else if (value > 9 && value < 100) {
-    std::string s = direction_brg;
+    std::string s = direction_brg.ToStdString();
     string r = s.substr(1, 2);
     unsigned int number_of_zeros = 3 - r.length();  // add 1 zero
 
@@ -921,7 +921,7 @@ wxImage tradnavOverlayFactory::DrawDirectionLabels(double value, int x, int y,
   wxString reverse_direction_brg = wxString::Format("%3.0f", reverse_direction);
 
   if (reverse_direction < 10) {
-    std::string s = reverse_direction_brg;
+    std::string s = reverse_direction_brg.ToStdString();
     string r = s.substr(2, 1);
     unsigned int number_of_zeros = 3 - r.length();  // add 2 zero
 
@@ -929,7 +929,7 @@ wxImage tradnavOverlayFactory::DrawDirectionLabels(double value, int x, int y,
     reverse_direction_brg = r;
 
   } else if (reverse_direction > 9 && reverse_direction < 100) {
-    std::string s = reverse_direction_brg;
+    std::string s = reverse_direction_brg.ToStdString();
     string r = s.substr(1, 2);
     unsigned int number_of_zeros = 3 - r.length();  // add 1 zero
 
@@ -1222,14 +1222,14 @@ wxImage &tradnavOverlayFactory::DrawLabelEBL(double value, int precision) {
   labels = wxString::Format("%3.0f", value);
 
   if (value < 10.0) {
-    std::string s = labels;
+    std::string s = labels.ToStdString();
     string r = s.substr(2, 1);
     unsigned int number_of_zeros = 3 - r.length();  // add 2 zero
 
     r.insert(0, number_of_zeros, '0');
     labels = r;
   } else if (value >= 10 && value < 100) {
-    std::string s = labels;
+    std::string s = labels.ToStdString();
     string r = s.substr(1, 2);
     unsigned int number_of_zeros = 3 - r.length();  // add 1 zero
 
@@ -1385,7 +1385,7 @@ wxString tradnavOverlayFactory::FormatBearing(double dbearing) {
   wxString bearing_angle = wxString::Format("%3.0f", dbearing);
 
   if (dbearing < 10.) {
-    std::string s = bearing_angle;
+    std::string s = bearing_angle.ToStdString();
     string r = s.substr(2, 1);
     unsigned int number_of_zeros = 3 - r.length();  // add 2 zero
 
@@ -1393,7 +1393,7 @@ wxString tradnavOverlayFactory::FormatBearing(double dbearing) {
     bearing_angle = r;
 
   } else if (dbearing > 9. && dbearing < 100.) {
-    std::string s = bearing_angle;
+    std::string s = bearing_angle.ToStdString();
     string r = s.substr(1, 2);
     unsigned int number_of_zeros = 3 - r.length();  // add 1 zero
 
