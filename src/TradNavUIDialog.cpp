@@ -1957,14 +1957,14 @@ void tradnavUIDialog::MakeIdentifyEvent() {
 
     brgs = wxString::Format("%3.0f", ebl_brg);
     if (ebl_brg < 10.0) {
-      std::string s = brgs;
+      std::string s = brgs.ToStdString();
       string r = s.substr(2, 1);
       unsigned int number_of_zeros = 3 - r.length();  // add 1 zero
 
       r.insert(0, number_of_zeros, '0');
       brgs = r;
     } else if (ebl_brg >= 10 && ebl_brg < 100) {
-      std::string s = brgs;
+      std::string s = brgs.ToStdString();
       string r = s.substr(1, 2);
       unsigned int number_of_zeros = 3 - r.length();  // add 1 zero
 
@@ -2000,14 +2000,14 @@ void tradnavUIDialog::MakeEBLEvent() {
     brgs = wxString::Format("%3.0f", ebl_brg);
 
     if (ebl_brg < 10.0) {
-      std::string s = brgs;
+      std::string s = brgs.ToStdString();
       string r = s.substr(2, 1);
       unsigned int number_of_zeros = 3 - r.length();  // add 1 zero
 
       r.insert(0, number_of_zeros, '0');
       brgs = r;
     } else if (ebl_brg >= 10 && ebl_brg < 100) {
-      std::string s = brgs;
+      std::string s = brgs.ToStdString();
       string r = s.substr(1, 2);
       unsigned int number_of_zeros = 3 - r.length();  // add 1 zero
 
