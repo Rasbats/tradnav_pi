@@ -671,8 +671,8 @@ void tradnavUIDialog::OnNewRoute(wxCommandEvent& event) {
       "route\nPress CTRL+R and enter route name in route properties");
 
   pParent->SetFocus();
-  wxUIActionSimulator sim;
-  sim.KeyDown(82, wxMOD_CONTROL);
+  //wxUIActionSimulator sim;
+  //sim.KeyDown(82, wxMOD_CONTROL);
 
   // sim.KeyUp(82, wxMOD_CONTROL);
 }

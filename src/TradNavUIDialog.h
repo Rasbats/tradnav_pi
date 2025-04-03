@@ -55,7 +55,7 @@
 #include <wx/thread.h>
 #include <wx/event.h>
 #include <wx/listctrl.h>
-#include <wx/uiaction.h>
+//#include <wx/uiaction.h>
 #include <wx/app.h>
 #include <cmath>
 #include <wx/menu.h>
@@ -74,7 +74,7 @@
 #endif
 
 #if wxUSE_UIACTIONSIMULATOR
-#include "wx/uiaction.h"
+//#include "wx/uiaction.h"
 #endif
 
 /* XPM */
