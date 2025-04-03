@@ -61,7 +61,7 @@ class tradnavUIDialog;
 
 #define tradnav_TOOL_POSITION -1  // Request default positioning of toolbar tool
 
-class tradnav_pi : public opencpn_plugin_119 {
+class tradnav_pi : public opencpn_plugin_118 {
 public:
   tradnav_pi(void *ppimgr);
   ~tradnav_pi(void);
