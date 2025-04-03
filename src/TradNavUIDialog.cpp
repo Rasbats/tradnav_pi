@@ -256,16 +256,16 @@ void tradnavUIDialog::SaveIndexRangeDirection(wxString route_name,
     wxString bLat = wxString::Format("%f", (*itOut).beginLat);
     wxString bLon = wxString::Format("%f", (*itOut).beginLon);
 
-    b_position.append_attribute("lat").set_value(bLat);
-    b_position.append_attribute("lon").set_value(bLon);
+    b_position.append_attribute("lat").set_value(bLat.mb_str());
+    b_position.append_attribute("lon").set_value(bLon.mb_str());
 
     xml_node e_position = m_targetpoint.append_child("end");
 
     wxString eLat = wxString::Format("%f", (*itOut).endLat);
     wxString eLon = wxString::Format("%f", (*itOut).endLon);
 
-    e_position.append_attribute("lat").set_value(eLat);
-    e_position.append_attribute("lon").set_value(eLon);
+    e_position.append_attribute("lat").set_value(eLat.mb_str());
+    e_position.append_attribute("lon").set_value(eLon.mb_str());
 
     xml_node idistance = m_targetpoint.append_child("index_distance");
     wxString dist = wxString::Format("%f", (*itOut).distance);
@@ -276,8 +276,8 @@ void tradnavUIDialog::SaveIndexRangeDirection(wxString route_name,
     wxString llat = wxString::Format("%f", (*itOut).label_lat);
     wxString llon = wxString::Format("%f", (*itOut).label_lon);
 
-    label.append_attribute("label_lat").set_value(llat);
-    label.append_attribute("label_lon").set_value(llon);
+    label.append_attribute("label_lat").set_value(llat.mb_str());
+    label.append_attribute("label_lon").set_value(llon.mb_str());
 
     idn++;
   }
@@ -297,16 +297,16 @@ void tradnavUIDialog::SaveIndexRangeDirection(wxString route_name,
     wxString bLat = wxString::Format("%f", (*itOutRange).beginLat);
     wxString bLon = wxString::Format("%f", (*itOutRange).beginLon);
 
-    b_position.append_attribute("lat").set_value(bLat);
-    b_position.append_attribute("lon").set_value(bLon);
+    b_position.append_attribute("lat").set_value(bLat.mb_str());
+    b_position.append_attribute("lon").set_value(bLon.mb_str());
 
     xml_node e_position = r_targetpoint.append_child("end");
 
     wxString eLat = wxString::Format("%f", (*itOutRange).endLat);
     wxString eLon = wxString::Format("%f", (*itOutRange).endLon);
 
-    e_position.append_attribute("lat").set_value(eLat);
-    e_position.append_attribute("lon").set_value(eLon);
+    e_position.append_attribute("lat").set_value(eLat.mb_str());
+    e_position.append_attribute("lon").set_value(eLon.mb_str());
 
     xml_node idistance = r_targetpoint.append_child("range_distance");
     wxString dist = wxString::Format("%f", (*itOutRange).distance);
@@ -317,8 +317,8 @@ void tradnavUIDialog::SaveIndexRangeDirection(wxString route_name,
     wxString ldist = wxString::Format("%f", (*itOutRange).label_lat);
     wxString ldir = wxString::Format("%f", (*itOutRange).label_lon);
 
-    label.append_attribute("label_lat").set_value(ldist);
-    label.append_attribute("label_lon").set_value(ldir);
+    label.append_attribute("label_lat").set_value(ldist.mb_str());
+    label.append_attribute("label_lon").set_value(ldir.mb_str());
 
     idn++;
   }
